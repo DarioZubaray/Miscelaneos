@@ -11,9 +11,15 @@ export class ClasesComponent implements OnInit {
   props: Object = {
     'danger': true
   }
+  loading: boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ejecutarProceso() {
+    this.loading = true;
+    setTimeout( () => this.loading = false, 3000);
   }
 
 }
