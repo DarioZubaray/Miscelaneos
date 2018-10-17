@@ -15,3 +15,12 @@
   <button type="button" class="btn btn-success mx-1" (click)="alerta = 'alert-success'">Success</button>
   <button type="button" class="btn btn-dark mx-1" (click)="alerta = 'alert-dark'">Dark</button>
 </div>
+
+<br><br>
+
+<h3 [ngClass]=" { 'text-danger': props.danger, 'text-info': !props.danger }">
+  Hola mundo
+</h3>
+
+<button class="btn" [ngClass]=" { 'btn-danger': props.danger, 'btn-info': !props.danger }"
+   (click)="props.danger = !props.danger">Cambiar</button>
